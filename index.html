@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password-Make New Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Create a Random Password</h1>
+    <div class="input_section">
+        <input type="text" id="input_box" placeholder="Generate Password">
+        <button onclick="copyPass()">Copy</button>
+    </div>
+    <button class="Generate" onclick="CreatePassword()">Generate Password</button>
+
+    <script>
+        const inputBox = document.getElementById("input_box");
+        let lengths =15;
+        const upperLetter = "AQZWXSEDCRFVTGBYHNUJMIKLOP"
+        const lowerLetter = "aqzwsxedcrfvtgbyhnujmikolp"
+        const numbers = "1234567890";
+        const charecter = "!@#$%&*";
+
+     let allpass = upperLetter + lowerLetter + numbers + charecter;
+        function CreatePassword() {
+            let Password = "";
+            Password += upperLetter[Math.floor(Math.random()*upperLetter.length)]
+            Password += lowerLetter[Math.floor(Math.random()*lowerLetter.length)]
+            Password += numbers[Math.floor(Math.random()*numbers.length)]
+            Password += charecter[Math.floor(Math.random()*charecter.length)]
+
+            while(lengths >Password.length){
+                Password += allpass[Math.floor(Math.random()*allpass.length)]
+            }
+
+            inputBox.value = Password;
+        }
+
+        function copyPass() {
+            inputBox.select();
+            document.execCommand("copy");
+        }
+    </script>
+</body>
+</html>

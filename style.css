@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: black;
+    color: #fff;
+}
+h1{
+    display: block;
+    text-align: center;
+    margin: 20px;
+}
+.input_section{
+    width: 350px;
+    height: 60px;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 35%;
+    padding: 5px;
+}
+#input_box{
+    padding: 10px;
+    font-size: 20px;
+    outline: 0;
+
+}
+.input_section button{
+    font-size: 20px;
+    background-color: aqua;
+    color: #fff;
+    padding: 10px;
+}
+.Generate{
+    font-size: 20px;
+    background-color: aqua;
+    color: #fff;
+    padding: 10px;
+    margin-left: 40%;
+    margin-top: 20px;
+}
